@@ -1,16 +1,19 @@
 name: Cypress Test Alura
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  cypress-chrome-test:
-   runs-on: ubutu-latest
-   steps:  
+  runs:
+    runs-on: ubuntu-latest
+    steps:
       - name: Get code
         uses: actions/checkout@v3.5.3
-   
-      - name: install dependencia
+
+      - name: Install dependencies
         run: yarn install
-   
+
       - name: Run E2E tests
         run: yarn cypress run
