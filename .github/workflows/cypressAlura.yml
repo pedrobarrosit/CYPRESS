@@ -1,6 +1,6 @@
 name: Cypress Test Alura
 
-on:[poshu]
+on: [push]
 
 jobs:
    cypress-chrome-test:
