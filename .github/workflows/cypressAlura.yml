@@ -1,0 +1,20 @@
+name: Cypress Test Alura
+
+on:[poshu]
+
+jobs:
+   cypress-chrome-test:
+   runs-on: ubutu-latest
+   
+   runs:
+      using: 'node16'
+      main: 'master.js'
+      
+ - name: Get code
+   uses: actions/checkout@v3.5.3
+   
+ - name: install dependencia
+   run: yarn install
+   
+ - name: Run E2E Test
+   run: yarn cypress run
